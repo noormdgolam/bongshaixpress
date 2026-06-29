@@ -64,6 +64,20 @@ return [
             ]) : [],
         ],
 
+        'opencart' => [
+            'driver' => 'mysql',
+            'host' => env('OPENCART_DB_HOST', '127.0.0.1'),
+            'port' => env('OPENCART_DB_PORT', '3306'),
+            'database' => env('OPENCART_DB_DATABASE', 'opencart'),
+            'username' => env('OPENCART_DB_USERNAME', 'root'),
+            'password' => env('OPENCART_DB_PASSWORD', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'strict' => true,
+            'engine' => null,
+        ],
+
         'pgsql' => [
             'driver' => 'pgsql',
             'url' => env('DATABASE_URL'),
