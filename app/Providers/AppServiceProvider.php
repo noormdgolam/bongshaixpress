@@ -30,6 +30,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        \Illuminate\Support\Facades\Schema::defaultStringLength(191);
         Password::defaults(function () {
             $rule = Password::min( 8 );
             return $this->app->isProduction() ? $rule->mixedCase()->uncompromised() : $rule;
